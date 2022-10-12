@@ -1,0 +1,296 @@
+@font-face {
+  font-family: 'montserat';
+  src: local('MyFont'), url(./fonts/Montserrat-Regular.ttf) format('woff');
+}
+@font-face {
+  font-family: 'montserat-medium';
+  src: local('MyFont'), url(./fonts/Montserrat-SemiBold.ttf) format('woff');
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+  background-color: #F6F9FC;
+  font-family: montserat;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.App {
+  text-align: center;
+  margin: 0 auto;
+}
+.App h1 {
+  font-size: 2em;
+}
+select{
+  border: none;
+    background-color: white;
+    border-radius:10px;
+    padding: 0.5em 2em;
+    font-family:montserat;
+    box-shadow: 0 3px 7px -5px rgba(50, 50, 93, .25), 0 8px 6px -8px rgba(0, 0, 0, .3)
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #fffefe;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  box-shadow: 0 3px 7px -5px rgba(50, 50, 93, .25), 0 8px 6px -8px rgba(0, 0, 0, .3);
+  align-self: center;
+}
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4286f4;
+  cursor: pointer;
+  border-radius: 10px
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4286f4;
+  cursor: pointer;
+}
+.sort {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.wrapp {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  font-size: 0.6em;
+  line-height: 1.3em;
+  grid-gap: 2em;
+  text-align: start;
+}
+.wrapper{
+  display: flex;
+}
+.poster{
+  grid-row: 1/1;
+  justify-self: start;
+  border-radius: 1em 0em 0em 1em;
+}
+.movie{
+  background-color: white;
+  overflow: hidden;
+  margin:1em;
+  display:grid;
+  grid-template-columns: 3fr 3fr 1fr;
+  box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3);
+  border-radius: 1em;
+  transition: transform .1s;
+}
+.movie:hover{
+  box-shadow:0 23px 97px -15px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3);
+  cursor:pointer;
+   transform: scale(1.02);
+}
+.movie-basic-info{
+  display: flex;
+}
+.movie-basic-info p {
+  margin-right: 10px;
+}
+.movie-details-layout{
+  background-color: white;
+  grid-template-columns: 1fr 3fr ;
+  box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3);
+  display: grid;
+  margin: 0 auto;
+  width: 90%;
+}
+.movie-details{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+  
+}
+.movie-details h1{
+  font-size: 3em;
+  text-align: start;
+   font-family: montserat-medium;
+}
+.movie-details span{
+  grid-column: 1/1;
+  grid-row: 2/2;
+  padding-top: 10px;
+  flex-grow: 2;
+}
+.movie-details h2{
+  font-family: montserat-medium
+}
+.movie-details p {
+  font-family: montserat
+}
+.movie-details-overview{
+  text-align: start;
+  flex-grow: 2;
+  padding-top: 10px;
+  line-height: 1.4em;
+   font-family: montserat-medium;
+}
+.movie-details-layout h2{
+  text-align: start;
+}
+.movie-details-crew{
+  justify-self: end;
+  flex-grow: 3;
+  display: flex;
+  text-align: start;
+}
+.movie-details-crew h1{
+  font-size: 1em;
+  font-family: montserat-medium
+}
+.movie-info{
+  
+  margin: 1em;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  justify-self: center;
+}
+.movie-rating{
+  border-radius: 5px;
+  align-self: center;
+  font-family: montserat-medium;
+  float: right;
+}
+.movie-overview{
+  align-self:center;
+}
+
+.movie-title{
+  font-family: montserat-medium;
+ 
+  
+}
+.movie-release{
+  font-family: montserat;
+}
+.cast{
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  overflow: hidden;
+  padding:1em;
+  box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3);
+}
+.castMember{
+  transition: transform .1s;
+}
+.castMember:hover{
+  
+  cursor:pointer;
+   transform: scale(1.1);
+}
+  
+  
+
+.castMember img{
+  border-radius: 5px 5px 0px 0px;
+  height:200px;
+}
+.castMember p{
+  font-family: montserat-medium
+}
+.castMember h1 {
+  font-family: montserat;
+  font-size: 0.9em
+}
+
+meter::-webkit-meter-bar {background: #e6e6e9;
+border-radius: 5px;box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;} /*background color of bar*/
+meter::-webkit-meter-optimum-value {background: green;}
+meter::-webkit-meter-suboptimum-value{background:orange;}
+meter::-webkit-meter-even-less-good-value{background:red;}
+
+@media only screen and (max-width: 1200px) {
+  .wrapp {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  font-size: 0.6em;
+  line-height: 1.3em;
+  grid-gap: 2em;
+  text-align: start;
+  
+  
+}
+}
+@media only screen and (max-width: 800px) {
+  .wrapp {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  font-size: 0.7em;
+  line-height: 1.1em;
+  grid-gap: 2em;
+  text-align: start;
+  
+  
+}
+}
+@media only screen and (max-width: 450px) {
+  .wrapp {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  font-size: 0.5em;
+  line-height: 1.1em;
+  grid-gap: 2em;
+  text-align: start;
+  
+  
+}
+}
